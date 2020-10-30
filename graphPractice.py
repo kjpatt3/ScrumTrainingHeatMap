@@ -1,9 +1,7 @@
 import matplotlib.pyplot as plt
 from Point import Point
+import tkinter as userInterface
 
-
-pointOne = Point()
-pointOne.initialize(1,1,"one")
 
 
 # Points for Focus Triangle
