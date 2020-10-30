@@ -1,11 +1,10 @@
 import matplotlib.pyplot as plt
 from Point import Point
-import tkinter as userInterface
 
 
 
 # Points for Focus Triangle
-x1 = [2,5,5,2] 
+x1 = [2,6,6,2] 
 y1 = [5,2,5,5] 
 # # plotting the Focus Triange
 plt.plot(x1, y1, label = "Focus Triangle")
@@ -26,7 +25,7 @@ for i in xCoords:
 
 
 #setting the values on the axis.
-plt.xlim(0,5)
+plt.xlim(0,6)
 plt.ylim(0,5)
 # naming the x axis
 plt.xlabel("How We feel We're Doing")
