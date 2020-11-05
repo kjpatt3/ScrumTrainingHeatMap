@@ -59,7 +59,7 @@ plt.xlabel("How We feel We're Doing")
 plt.ylabel("Importance")
 
 # giving a title to my graph
-plt.title('309 Scrum Stratus')
+plt.title('309 Scrum Status')
 
 # function to show the plot
 plt.show()
