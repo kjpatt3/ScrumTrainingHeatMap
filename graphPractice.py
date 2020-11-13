@@ -4,9 +4,10 @@ from xAxis import Axis
 
 #Gather User Input
 def userInput():
+    questionCount = input("Enter total number of questions: ")
     j=0
     points = []
-    while(j < 2):
+    while(j < questionCount):
         xVal = input("Enter X Value: ")
         yVal = input("Enter Y Value: ")
         label = raw_input("Enter Label: ")
