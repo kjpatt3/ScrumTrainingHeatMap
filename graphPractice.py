@@ -2,8 +2,26 @@ import matplotlib.pyplot as plt
 from Point import Point
 from xAxis import Axis
 
-p = Point()
-p.initialize(1,2,"test")
+#Gather User Input
+def userInput():
+    j=0
+    points = []
+    while(j < 2):
+        xVal = input("Enter X Value: ")
+        yVal = input("Enter Y Value: ")
+        label = raw_input("Enter Label: ")
+        p = Point()
+        p.initialize(xVal, yVal, label)
+        points.append(p)
+        j+=1
+    return points
+
+
+def plotPoint(x,y,clr,questionID):
+    plt.scatter(x,y,label = "dots", color = clr,marker = "o", s = 30)
+    plt.annotate(questionID,(x,y))
+
+
 # Points for Focus Triangle
 x1 = [2,6,6,2] 
 y1 = [5,2,5,5] 
@@ -28,26 +46,32 @@ plt.plot(xAxis.redX, xAxis.redY, color = "red")
 plt.axvspan(5, 6, alpha=0.5, ymax = 0.06, color='red')
 
 
+# Get User Input
+listOfPoints = userInput()
 
-# x axis values 
-a = 0.5
-b = 1.5
-c = 2.5
-d = 3.5
-e = 4.5
-f = 5.5
-xCoords = [d,e,f,c,b,f,e] 
-# corresponding y axis values 
-yCoords = [3,4,3,4.7,2,2.5,4.5] 
 
-# plotting the points  
-plt.scatter(xCoords, yCoords, label= "dots", color= "red", marker= "o", s=30) 
+# plotting the points from User Input
+i = 0
+while(i < len(listOfPoints)):
+    if(listOfPoints[i].xCoordinate > 0 and listOfPoints[i].xCoordinate < 1):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "green", listOfPoints[i].label)
+        i += 1
+    elif(listOfPoints[i].xCoordinate > 1 and listOfPoints[i].xCoordinate < 2):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "yellow", listOfPoints[i].label)
+        i += 1
+    elif(listOfPoints[i].xCoordinate > 2 and listOfPoints[i].xCoordinate < 3):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", listOfPoints[i].label)
+        i += 1
+    elif(listOfPoints[i].xCoordinate > 3 and listOfPoints[i].xCoordinate < 4):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", listOfPoints[i].label)
+        i += 1
+    elif(listOfPoints[i].xCoordinate > 4 and listOfPoints[i].xCoordinate < 5):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", listOfPoints[i].label)
+        i += 1
+    elif(listOfPoints[i].xCoordinate > 5 and listOfPoints[i].xCoordinate < 6):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "red", listOfPoints[i].label)
+        i += 1
 
-#Add Labels to each point
-j = 0
-for i in xCoords:
-    plt.annotate("Question "+str(j), (xCoords[j], yCoords[j]))
-    j+=1
 
 
 #setting the values on the axis.
