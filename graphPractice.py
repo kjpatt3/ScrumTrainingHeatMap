@@ -9,7 +9,7 @@ def userInput():
     while(j < 2):
         xVal = input("Enter X Value: ")
         yVal = input("Enter Y Value: ")
-        label = input ("Enter Label: ")
+        label = raw_input("Enter Label: ")
         p = Point()
         p.initialize(xVal, yVal, label)
         points.append(p)
@@ -53,23 +53,23 @@ listOfPoints = userInput()
 # plotting the points from User Input
 i = 0
 while(i < len(listOfPoints)):
-    if(listOfPoints[i].xCoordinate == 0.5):
-        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "green", "Question " + str(i))
+    if(listOfPoints[i].xCoordinate > 0 and listOfPoints[i].xCoordinate < 1):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "green", listOfPoints[i].label)
         i += 1
-    elif(listOfPoints[i].xCoordinate == 1.5):
-        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "yellow", "Question " + str(i))
+    elif(listOfPoints[i].xCoordinate > 1 and listOfPoints[i].xCoordinate < 2):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "yellow", listOfPoints[i].label)
         i += 1
-    elif(listOfPoints[i].xCoordinate == 2.5):
-        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", "Question " + str(i))
+    elif(listOfPoints[i].xCoordinate > 2 and listOfPoints[i].xCoordinate < 3):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", listOfPoints[i].label)
         i += 1
-    elif(listOfPoints[i].xCoordinate == 3.5):
-        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", "Question " + str(i))
+    elif(listOfPoints[i].xCoordinate > 3 and listOfPoints[i].xCoordinate < 4):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", listOfPoints[i].label)
         i += 1
-    elif(listOfPoints[i].xCoordinate == 4.5):
-        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", "Question " + str(i))
+    elif(listOfPoints[i].xCoordinate > 4 and listOfPoints[i].xCoordinate < 5):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", listOfPoints[i].label)
         i += 1
-    elif(listOfPoints[i].xCoordinate == 5.5):
-        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "orange", "Question " + str(i))
+    elif(listOfPoints[i].xCoordinate > 5 and listOfPoints[i].xCoordinate < 6):
+        plotPoint(listOfPoints[i].xCoordinate,listOfPoints[i].yCoordinate, "red", listOfPoints[i].label)
         i += 1
 
 
